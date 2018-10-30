@@ -28,6 +28,7 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,6 +38,7 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -62,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DBManager.cs" />
+    <Compile Include="Assets\Dialogue.cs" />
+    <Compile Include="Assets\DialogueManager.cs" />
+    <Compile Include="Assets\DialogueTrigger.cs" />
     <Compile Include="Assets\login.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Masuk.cs" />
