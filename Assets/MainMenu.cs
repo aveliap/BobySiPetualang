@@ -12,6 +12,11 @@ public class MainMenu : MonoBehaviour {
 		Application.Quit();
 	}
 
+    public void Back() 
+    {
+        SceneManager.LoadScene("MenuFull");
+    }
+
     private void Start()
     {
         if (DBManager.LoggedIn)

@@ -28,7 +28,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,7 +37,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -63,16 +61,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraSystem.cs" />
     <Compile Include="Assets\DBManager.cs" />
     <Compile Include="Assets\Dialogue.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
     <Compile Include="Assets\DialogueTrigger.cs" />
+    <Compile Include="Assets\Enemymove.cs" />
     <Compile Include="Assets\login.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Masuk.cs" />
     <Compile Include="Assets\move.cs" />
+    <Compile Include="Assets\Palyermove.cs" />
+    <Compile Include="Assets\playerHealth.cs" />
     <Compile Include="Assets\Register.cs" />
     <Compile Include="Assets\ScreenTransition.cs" />
+    <Compile Include="Assets\ShowPanel.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
