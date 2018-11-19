@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 143590449}
   - component: {fileID: 143590448}
   - component: {fileID: 143590447}
+  - component: {fileID: 143590450}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -188,7 +189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 286110610}
+      - m_Target: {fileID: 143590450}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -235,6 +236,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143590445}
   m_CullTransparentMesh: 0
+--- !u!114 &143590450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143590445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e09ba0a7f7e3eb459960fce5fc7e48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDisplay: {fileID: 0}
 --- !u!1 &286110608
 GameObject:
   m_ObjectHideFlags: 0

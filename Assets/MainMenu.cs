@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void QuitGame () {
 		Debug.Log("QUIT");
+        DBManager.LogOut();
 		Application.Quit();
 	}
 
