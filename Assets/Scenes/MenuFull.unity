@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 892288165}
   - component: {fileID: 892288164}
   - component: {fileID: 892288163}
+  - component: {fileID: 892288166}
   m_Layer: 5
   m_Name: HelpButton
   m_TagString: Untagged
@@ -636,7 +637,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892288164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 892288166}
+        m_MethodName: Help
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &892288164
@@ -673,6 +685,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892288161}
   m_CullTransparentMesh: 0
+--- !u!114 &892288166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892288161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e09ba0a7f7e3eb459960fce5fc7e48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDisplay: {fileID: 0}
 --- !u!1 &1714621002
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +708,7 @@ GameObject:
   - component: {fileID: 1714621006}
   - component: {fileID: 1714621005}
   - component: {fileID: 1714621004}
+  - component: {fileID: 1714621007}
   m_Layer: 5
   m_Name: CreditButton
   m_TagString: Untagged
@@ -747,7 +772,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714621005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1714621007}
+        m_MethodName: Kenali
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1714621005
@@ -784,6 +820,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714621002}
   m_CullTransparentMesh: 0
+--- !u!114 &1714621007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1714621002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e09ba0a7f7e3eb459960fce5fc7e48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDisplay: {fileID: 0}
 --- !u!1 &1863488866
 GameObject:
   m_ObjectHideFlags: 0

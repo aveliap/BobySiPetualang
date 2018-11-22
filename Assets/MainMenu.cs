@@ -18,6 +18,16 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("MenuFull");
     }
 
+    public void Help()
+    {
+        SceneManager.LoadScene("Bantuan");
+    }
+
+    public void Kenali()
+    {
+        SceneManager.LoadScene("Kenali");
+    }
+
     private void Start()
     {
         if (DBManager.LoggedIn)

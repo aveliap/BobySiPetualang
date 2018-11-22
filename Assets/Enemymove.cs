@@ -17,8 +17,17 @@ public class Enemymove : MonoBehaviour {
         if (hit.distance<1.2f)
         {
             Flip();
+            if (hit.collider.tag == "Player")
+            {
+                Destroy(hit.collider.gameObject);
+            }
         }
-	}
+        //if (gameObject.transform.position.y < -50)
+        //{
+        //    Destroy(gameObject);
+        //}
+
+    }
     void Flip()
     {
         if (XMoveDirection > 0)

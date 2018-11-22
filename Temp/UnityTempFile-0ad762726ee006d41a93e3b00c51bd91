@@ -4,10 +4,6 @@
 -langversion:4
 -out:Temp/Assembly-CSharp.dll
 -nostdlib
--r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
--r:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
--r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
--r:Library/ScriptAssemblies/Unity.TextMeshPro.dll
 -r:E:\unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll
 -r:E:\unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll
 -r:E:\unity\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll
@@ -70,6 +66,10 @@
 -r:E:\unity\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll
 -r:E:\unity\Editor\Data\Managed/UnityEditor.dll
 -r:E:\unity\Editor\Data\Managed/Unity.Locator.dll
+-r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+-r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.dll
 -r:E:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 -r:E:/unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll
 -r:E:/unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
@@ -197,7 +197,14 @@ Assets/Masuk.cs
 Assets/move.cs
 Assets/Palyermove.cs
 Assets/playerHealth.cs
+Assets/Q1.cs
+Assets/Q2.cs
+Assets/Q3.cs
+Assets/Q4.cs
+Assets/Question.cs
 Assets/Register.cs
 Assets/ScreenTransition.cs
 Assets/ShowPanel.cs
+Assets/SoalManager.cs
+Assets/Textcontrol.cs
 -lib:E:\unity\Editor\Data\MonoBleedingEdge\lib\mono\unity
