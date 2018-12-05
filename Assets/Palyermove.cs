@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Palyermove : MonoBehaviour
 {
 
@@ -10,12 +10,18 @@ public class Palyermove : MonoBehaviour
     public int playerJumpPower = 1250;
     private float moveX;
     public bool isGrounded;
+    public PlayerScore score;
 
+
+
+
+    //public GameObject scoreUI;
     // Update is called once per frame
     void Update()
     {
         PlayerMove();
         PlayerRaycast();
+        //scoreUI.gameObject.GetComponent<Text>().text = ("Skor " + DBManager.username + ": " + scor);
 
     }
 
@@ -68,20 +74,23 @@ public class Palyermove : MonoBehaviour
 
     }
 
-    void PlayerRaycast()
+     void PlayerRaycast()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if ( hit !=null && hit.collider !=null && hit.distance < 1.2f && hit.collider.gameObject.tag == "enemy")
+       
+        RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
+        if ( rayDown!=null && rayDown.collider != null && rayDown.distance < 2.0f && rayDown.collider.tag == "enemy")
         {
+            //Debug.Log("test");
             GetComponent<Rigidbody2D> ().AddForce(Vector2.up * 1000);
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 200);
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 8;
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
-            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            hit.collider.gameObject.GetComponent<Enemymove>().enabled = false;
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 200);
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 8;
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
+            rayDown.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            rayDown.collider.gameObject.GetComponent<Enemymove>().enabled = false;
 
+            score.AddPoints(10);
         }
-        if (hit != null && hit.collider != null && hit.distance < 1.2f && hit.collider.tag == "ground")
+        if (rayDown != null && rayDown.collider != null && rayDown.distance < 1.2f && rayDown.collider.tag == "ground")
         {
             isGrounded = true;
         }

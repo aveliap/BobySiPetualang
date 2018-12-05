@@ -29,8 +29,9 @@ public class Q4 : MonoBehaviour {
             //GetComponent<TextMesh>().text = d[Question.randQuestion];
         }
     }
-    public void OnMouseDown()
+     void OnMouseDown()
     {
+
         Question.selectedAnswer = gameObject.name;
         Question.choiceSelected = "y";
     }

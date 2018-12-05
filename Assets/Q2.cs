@@ -24,14 +24,19 @@ public class Q2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Question.randQuestion > -1)
-        {
-            textJawab.text = b[Question.randQuestion];
-            // GetComponent<TextMesh> ().text = b [Question.randQuestion];
-        }
+        //for (int i = 0; i < b.Capacity; i++)
+        //{
+            if (Question.randQuestion > -1)
+            {
+                textJawab.text = b[Question.randQuestion];
+                // GetComponent<TextMesh> ().text = b [Question.randQuestion];
+            }
+        //}
+        
     }
 
-    public void OnMouseDown(string jawaban)
+
+     void OnMouseDown()
     {
         Question.selectedAnswer = gameObject.name;
         Question.choiceSelected = "y";

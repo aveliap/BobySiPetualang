@@ -30,7 +30,7 @@ public class Q3 : MonoBehaviour {
             //GetComponent<TextMesh>().text = c[Question.randQuestion];
         }
     }
-    public void OnMouseDown()
+     void OnMouseDown()
     {
         Question.selectedAnswer = gameObject.name;
         Question.choiceSelected = "y";

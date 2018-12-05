@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Enemymove : MonoBehaviour {
 
     public int EnemySpeed;
@@ -14,12 +14,14 @@ public class Enemymove : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(XMoveDirection, 0));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
 
-        if (hit.distance<1.2f)
+        if (hit.distance<1.5f)
         {
             Flip();
             if (hit.collider.tag == "Player")
             {
                 Destroy(hit.collider.gameObject);
+                new WaitForSeconds(1);
+                SceneManager.LoadScene("Gameover");
             }
         }
         //if (gameObject.transform.position.y < -50)

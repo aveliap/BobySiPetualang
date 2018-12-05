@@ -10,12 +10,12 @@ public class ShowPanel : MonoBehaviour {
         panelQuest.SetActive(false);
 	}
 
-    //private void OnTriggerEnter2D(Collider2D player)
-   // {
-    //    if (player.gameObject.tag=="box")    
-     //   {
+    // void OnTriggerEnter2D(Collider2D trig)
+    //{
+    //    if (trig.gameObject.name == "peti")
+    //    {
     //        panelQuest.SetActive(true);
-     ///       Debug.Log("touched");
+    //        Debug.Log("touched");
     //    }
     //}
 
@@ -23,6 +23,7 @@ public class ShowPanel : MonoBehaviour {
     {
         if (collision.gameObject.tag == "box")
         {
+            
             panelQuest.SetActive(true);
             Debug.Log("touched");
         }

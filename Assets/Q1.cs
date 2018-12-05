@@ -29,7 +29,7 @@ public class Q1 : MonoBehaviour {
         }   
 	}
 
-     public void OnMouseDown()
+       void OnMouseDown()
     {
         Question.selectedAnswer = gameObject.name;
         Question.choiceSelected = "y";

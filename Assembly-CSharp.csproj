@@ -66,6 +66,7 @@
     <Compile Include="Assets\Dialogue.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
     <Compile Include="Assets\DialogueTrigger.cs" />
+    <Compile Include="Assets\Enemy_health.cs" />
     <Compile Include="Assets\Enemymove.cs" />
     <Compile Include="Assets\login.cs" />
     <Compile Include="Assets\MainMenu.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Q3.cs" />
     <Compile Include="Assets\Q4.cs" />
     <Compile Include="Assets\Question.cs" />
+    <Compile Include="Assets\Questionn.cs" />
     <Compile Include="Assets\Register.cs" />
     <Compile Include="Assets\ScreenTransition.cs" />
     <Compile Include="Assets\ShowPanel.cs" />

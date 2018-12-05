@@ -20,6 +20,20 @@ public class Question : MonoBehaviour {
     public static string choiceSelected = "n";
     public static int randQuestion = -1;
     Text textSoal;
+
+    public List<string> CorrectAnswer
+    {
+        get
+        {
+            return correctAnswer;
+        }
+
+        set
+        {
+            correctAnswer = value;
+        }
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -28,21 +42,28 @@ public class Question : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (randQuestion == -1)
+        for (int i = 0; i <= questions.Capacity; i++)
         {
-            randQuestion = Random.Range(0, 7);
+            
+            if (randQuestion == -1)
+            {
+                Debug.Log("t7ru");
+                randQuestion = Random.Range(0, questions.Capacity);
+            }
+            if (randQuestion > -1)
+            {
+                
+                textSoal.text = questions[randQuestion];
+                //GetComponent<TextMesh>().text = questions[randQuestion];
+            }
         }
-         if (randQuestion > -1)
-        {
-            textSoal.text = questions[randQuestion];
-            //GetComponent<TextMesh>().text = questions[randQuestion];
-        }
+        
 
         if (choiceSelected == "y")
         {
-            //choiceSelected = "n";
-
-            if (correctAnswer[randQuestion] == selectedAnswer)
+            choiceSelected = "n";
+            Debug.Log("tru");
+            if (CorrectAnswer[randQuestion] == selectedAnswer)
             {
                 Debug.Log("benar");
             }
