@@ -10,11 +10,13 @@ public class Questionn : MonoBehaviour {
         public string questionText;
         public string[] answers;
         public int correctAnswerIndex;
-        public Question(string questionText, string[] answers, int correctAnswerIndex)
+        public string materiIndex;
+        public Question(string questionText, string[] answers, int correctAnswerIndex, string materiIndex)
         {
             this.questionText = questionText;
             this.answers = answers;
             this.correctAnswerIndex = correctAnswerIndex;
+            this.materiIndex = materiIndex;
         }
     }
 
@@ -25,6 +27,7 @@ public class Questionn : MonoBehaviour {
     public PlayerScore score;
     public GameObject scoreUI;
     public GameObject popup;
+    private Question currentMateri; 
 
     private Question[] questions = new Question[7];
     private int currentQuestionIndex;
@@ -32,13 +35,20 @@ public class Questionn : MonoBehaviour {
     private int questionfinished;
     // Use this for initialization
 	void Start () {
-        questions[0] = new Question("Negara yang pernah menjajah nusantara, yaitu", new string[] { "Portugis", "Amerika", "Belanda", "Jepang" }, 1);
-        questions[1] = new Question("Salah satu kekejaman dari penjajah jepang adalah kerja paksa, atau dalam bahasa jepang disebut dengan", new string[] { "Seikerei", "Heiho", "Dokuritsu", "Romusha" }, 3);
-        questions[2] = new Question("Ketika jepang menjajah, terdapat ritual yaitu “Seikerei”. Apa itu ritual seikerei?", new string[] { "Membungkukkan badan ke arah negara jepang", "Membungkukkan badan ke arah matahari terbit", "Membungkukkan badan ke arah matahari terbenam", "Membungkukkan badan ke arah rasi bintang timur" }, 1);
-        questions[3] = new Question("Perjuangan rakyat Indonesia mengusir penjajah sering  mengalami kegagalan, dikarenakan faktor-faktor berikut", new string[] { "Perjuangan bersifat kedaerahan", "Kurangnya rasa persatuan dan kesatuan", "Lemahnya persenjataan", "Semua benar" }, 3);
-        questions[4] = new Question("Jepang menyerah setelah dijatuhi bom atom oleh amerika dan sekutu, kota yang dijatuhi bom atom yaitu", new string[] { "Hiroshima dan Nagasaki", "Tokyo dan Osaka", "Osaka dan Hiroshima", "Tokyo dan Nagasaki" }, 0);
-        questions[5] = new Question("Kepanjangan dari BPUPKI adalah", new string[] { "Badan Penyelidik Usaha Persiapan Kemerdekaan Indonesia", "Badan Persiapan Usaha Penyelidikan Kemerdekaan Indonesia", "Badan Penggerak Usaha Persiapan Kemerdekaan Indonesia", "Badan Pengatur Usaha Persiapan Kemerdekaan Indonesia" }, 0);
-        questions[6] = new Question("Berikut merupakan salah satu tokoh panitia 9, kecuali", new string[] { "Ir. Soekarno", "Mr. Mohammad Yamin", "H. Agus Salim", "Adam Malik" }, 3);
+        questions[0] = new Question("Negara yang pernah menjajah nusantara, yaitu", new string[] { "Portugis", "Amerika", "Belanda", "Jepang" }, 1,
+            "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
+        questions[1] = new Question("Salah satu kekejaman dari penjajah jepang adalah kerja paksa, atau dalam bahasa jepang disebut dengan", new string[] { "Seikerei", "Heiho", "Dokuritsu", "Romusha" }, 3,
+            "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
+        questions[2] = new Question("Ketika jepang menjajah, terdapat ritual yaitu “Seikerei”. Apa itu ritual seikerei?", new string[] { "Membungkukkan badan ke arah negara jepang", "Membungkukkan badan ke arah matahari terbit", "Membungkukkan badan ke arah matahari terbenam", "Membungkukkan badan ke arah rasi bintang timur" }, 1,
+            "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
+        questions[3] = new Question("Perjuangan rakyat Indonesia mengusir penjajah sering  mengalami kegagalan, dikarenakan faktor-faktor berikut", new string[] { "Perjuangan bersifat kedaerahan", "Kurangnya rasa persatuan dan kesatuan", "Lemahnya persenjataan", "Semua benar" }, 3,
+        "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
+        questions[4] = new Question("Jepang menyerah setelah dijatuhi bom atom oleh amerika dan sekutu, kota yang dijatuhi bom atom yaitu", new string[] { "Hiroshima dan Nagasaki", "Tokyo dan Osaka", "Osaka dan Hiroshima", "Tokyo dan Nagasaki" }, 0,
+            "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
+        questions[5] = new Question("Kepanjangan dari BPUPKI adalah", new string[] { "Badan Penyelidik Usaha Persiapan Kemerdekaan Indonesia", "Badan Persiapan Usaha Penyelidikan Kemerdekaan Indonesia", "Badan Penggerak Usaha Persiapan Kemerdekaan Indonesia", "Badan Pengatur Usaha Persiapan Kemerdekaan Indonesia" }, 0,
+            "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
+        questions[6] = new Question("Berikut merupakan salah satu tokoh panitia 9, kecuali", new string[] { "Ir. Soekarno", "Mr. Mohammad Yamin", "H. Agus Salim", "Adam Malik" }, 3,
+            "Negara indonesia pernah dijajah oleh 6 negara, yaitu: Portugis(1509 - 1595 M), Spanyol(1521 - 1692 M),Belanda(1602 - 1942 M),Perancis(1806 - 1811 M),Inggris(1811 - 1816 M),Jepang(1942 - 1945 M)");
 
         chooseQuestion();
         //currentQuestion = questions[currentQuestionIndex];
@@ -54,12 +64,16 @@ public class Questionn : MonoBehaviour {
     void assignQuestion(int questionNum)   
     {
         currentQuestion = questions[questionNum];
+        currentMateri = questions[questionNum];
         questionText.text = currentQuestion.questionText;
+        questionText.text = currentMateri.questionText;
         for (int i = 0; i < answerButton.Length; i++)
         {
             answerButton[i].GetComponentInChildren<Text>().text = currentQuestion.answers[i];
         }
     }
+
+
 
    public void checkAnswer(int buttonNum)
     {

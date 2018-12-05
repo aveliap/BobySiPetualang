@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour {
 
     public void High()
     {
-        SceneManager.LoadScene("Highscre");
+        SceneManager.LoadScene("Highscore");
     }
 
     private void Start()
