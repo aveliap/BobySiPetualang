@@ -5,10 +5,12 @@ using UnityEngine;
 public class ShowPanel : MonoBehaviour {
 
     public GameObject panelQuest;
-	// Use this for initialization
-	void Start () {
+    public GameObject popup;
+    // Use this for initialization
+    void Start () {
         panelQuest.SetActive(false);
-	}
+        popup.SetActive(false);
+    }
 
     // void OnTriggerEnter2D(Collider2D trig)
     //{
@@ -35,6 +37,7 @@ public class ShowPanel : MonoBehaviour {
         {
             Debug.Log("exit");
             panelQuest.SetActive(false);
+            popup.SetActive(false);
             Destroy(collision.gameObject);
         }
     }

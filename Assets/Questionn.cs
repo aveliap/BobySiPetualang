@@ -24,7 +24,7 @@ public class Questionn : MonoBehaviour {
     public GameObject panelQuest;
     public PlayerScore score;
     public GameObject scoreUI;
-
+    public GameObject popup;
 
     private Question[] questions = new Question[7];
     private int currentQuestionIndex;
@@ -69,6 +69,7 @@ public class Questionn : MonoBehaviour {
             //Destroy(gameObject);
             //panelQuest.SetActive(false);
             score.AddPoints(10);
+            popup.SetActive(true);
         }
         else
         {

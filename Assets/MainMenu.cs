@@ -28,6 +28,11 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("Kenali");
     }
 
+    public void High()
+    {
+        SceneManager.LoadScene("Highscre");
+    }
+
     private void Start()
     {
         if (DBManager.LoggedIn)

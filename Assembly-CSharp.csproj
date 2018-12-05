@@ -81,10 +81,12 @@
     <Compile Include="Assets\Q4.cs" />
     <Compile Include="Assets\Question.cs" />
     <Compile Include="Assets\Questionn.cs" />
+    <Compile Include="Assets\Questionn2.cs" />
     <Compile Include="Assets\Register.cs" />
     <Compile Include="Assets\ScreenTransition.cs" />
     <Compile Include="Assets\ShowPanel.cs" />
     <Compile Include="Assets\SoalManager.cs" />
+    <Compile Include="Assets\SQL_Highscore.cs" />
     <Compile Include="Assets\Textcontrol.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

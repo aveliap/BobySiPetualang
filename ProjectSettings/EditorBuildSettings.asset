@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kenali.unity
     guid: 4de2116314d473448a0da5d365596627
+  - enabled: 1
+    path: Assets/Scenes/Game2.unity
+    guid: 400d5733afbd2e74a9cbf309caf698fe
+  - enabled: 1
+    path: Assets/Scenes/Highscore.unity
+    guid: 7542be466b424ce49b101756bb8d886d
   m_configObjects: {}
